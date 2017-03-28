@@ -1,4 +1,4 @@
-# modifizierte Dateien (getrackte) in den Stage überführen und gleichzeitig commiten
+﻿# modifizierte Dateien (getrackte) in den Stage überführen und gleichzeitig commiten
 git commit -am "Commit message"
 
 # auflisten aller getrackten Files
@@ -15,6 +15,15 @@ git checkout -- [FILE_NAME]
 
 # Datei löschen
 git rm [FILE_NAME]
+
+# Commit History anzeigen
+git log 
+
+# bessere anzeige
+git log --oneline --graph --decorate
+
+# Datei History 
+git log -- [Dateiname]
 
 # Adden
 git add -A   # stages ALL
