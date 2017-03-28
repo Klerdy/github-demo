@@ -1,0 +1,22 @@
+# modifizierte Dateien (getrackte) in den Stage überführen und gleichzeitig commiten
+git commit -am "Commit message"
+
+# auflisten aller getrackten Files
+git ls-files
+
+# rekursives Adden | mehrere Unterordner mit Dateien
+git add .
+
+# Datei aus der Staging Area entfernen
+git reset HEAD [NAME_DER_DATEI]
+
+# Datei Inhalt auf letzten Commit setzen
+git checkout -- [FILE_NAME]
+
+# Datei löschen
+git rm [FILE_NAME]
+
+# Adden
+git add -A   # stages ALL
+git add .    # stages new and modified, without deleted
+git add -u   # stages modified and deleted, without new
