@@ -29,3 +29,6 @@ git log -- [Dateiname]
 git add -A   # stages ALL
 git add .    # stages new and modified, without deleted
 git add -u   # stages modified and deleted, without new
+
+# Git Config einstellen
+git config --global -e
