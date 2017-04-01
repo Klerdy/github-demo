@@ -1,6 +1,6 @@
 # Learning Git Projekt
 
-This is a simple website project for showing how to use Git and Github together.
+This is a simple website project for showing how to use Git and Github together. 
 
 ## Introduction
 
@@ -12,4 +12,8 @@ As stated above, the main purpose is to provide simple examples for Git training
 
 ## How To Contribute
 
-This is a simple web project, deployment can be on any web server or even local file system.
+This is a simple web project, deployment can be on any web server or even local file system. 
+
+## Greetings
+
+Thanks to Udemy!
