@@ -32,3 +32,20 @@ git add -u   # stages modified and deleted, without new
 
 # Git Config einstellen
 git config --global -e
+
+# Git Difftool verwenden
+# --- Lokale Vergleiche ---
+# Vergleich Working Directory vs Staging Area
+git difftool
+# Vergleich Working Directory vs Git Repo HEAD
+git difftool HEAD
+# Vergleich Staging vs Git Repo
+git difftool --staged HEAD
+
+# Vergleich zwischen Commits
+# Commit ID herausfinden ( git log --oneline )
+git difftool ID HEAD oder git difftool HEAD HEAD^ (HEAD und der vorherige)
+
+# --- Lokal vs Remote ---
+git difftool master origin/master
+
