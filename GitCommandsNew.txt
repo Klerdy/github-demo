@@ -75,3 +75,6 @@ git merge [NameDesZuMergendenBranches] --no-ff   # Es werden nicht einfach die C
 
 # Mergetool
 git mergetool # wird benötigt, wenn es Konflikte beim AutoMerge gibt, z.B: Änderungen an einer Datei von zwei Entwicklern
+
+# Rebase ( Den Branch verschieben zu dem letzten Commit des Master Branches )
+git rebase master
