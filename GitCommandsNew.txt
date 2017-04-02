@@ -49,3 +49,29 @@ git difftool ID HEAD oder git difftool HEAD HEAD^ (HEAD und der vorherige)
 # --- Lokal vs Remote ---
 git difftool master origin/master
 
+# Vergleich zwischen Branches
+git difftool [branch1] [branch2]
+# Branches 
+
+# Branches anzeigen
+git branch -a
+
+# Branch erzeugen
+git branch [NAME]
+git checkout -b [branchName]
+
+# Branch umbenennen
+git branch -m [Branchname] [NeuerBranchName]
+
+# Branch wechseln 
+git checkout [BranchName]
+
+# Branch löschen
+git branch -d [zulöschenderBranch]
+
+# Branches Mergen (wird immer mit dem aktuellem Branch zusammengeführt (gecheckoutet))
+git merge [NameDesZuMergendenBranches]
+git merge [NameDesZuMergendenBranches] --no-ff   # Es werden nicht einfach die Commits des Branches angehangen, man kann besser erkennen, was aus dem Branch alles kommt.
+
+# Mergetool
+git mergetool # wird benötigt, wenn es Konflikte beim AutoMerge gibt, z.B: Änderungen an einer Datei von zwei Entwicklern
