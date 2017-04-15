@@ -20,7 +20,7 @@ git rm [FILE_NAME]
 git log 
 
 # bessere anzeige
-git log --oneline --graph --decorate
+git log --oneline --graph --decorate --all
 
 # Datei History 
 git log -- [Dateiname]
@@ -78,3 +78,56 @@ git mergetool # wird benötigt, wenn es Konflikte beim AutoMerge gibt, z.B: Änd
 
 # Rebase ( Den Branch verschieben zu dem letzten Commit des Master Branches )
 git rebase master
+
+# Rebase mit Remote 
+git fetch origin master => Referenzen updaten
+
+# Den Remote Branch in den lokalen Branch aufnehmen
+git pull --rebase origin master
+
+# Stashin
+# - quasi eine Art der Speicherung, falls Dateien noch nicht vollständig fertig sind aber man z.B den Branch wechseln möchte, ohne das unfertige zu commiten
+git stash # oder git stash save "Save Message"
+
+# auch ungetrackte Dateien stashen
+git stash -u
+
+# weiter machen ab dem Stash
+git stash apply
+
+# Stash Liste abrufen
+git stash list
+
+# letzten Stash löschen
+git stash drop
+
+# Stash wieder aufnehmen und löschen
+git stash pop
+
+# Bestimmten Stash zeigen
+git stash show stash@{NUMMER} # siehe list
+
+# Bestimmten Stash aufrufen
+git stash apply stash@{NUMMER} # siehe list
+
+# Bestimmten Stash löschen
+git stash drop stash@{NUMMER} # siehe list
+
+# Stash Liste löschen
+git stash clear
+
+# Aktuellen Stash im neuen Branch bearbeiten
+git stash branch ['BranchName']
+
+# TAGS setzen | Hinweise
+# quasi extra Notizen für einen Commit, immer nachdem man commitet hat verwenden!
+git tag [TagMessage oder Name]
+
+# Tags anzeigen
+git tag --list
+
+# Tag löschen
+git tag --delete [NameDesTags]
+
+# Annotated Tag, z.B für Versionsangaben
+git tag -a [Name oder Version]
