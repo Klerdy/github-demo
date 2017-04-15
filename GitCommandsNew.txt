@@ -1,6 +1,9 @@
 ﻿# modifizierte Dateien (getrackte) in den Stage überführen und gleichzeitig commiten
 git commit -am "Commit message"
 
+# letzte Commit Nachricht nochmal ändern
+git commit --amend
+
 # auflisten aller getrackten Files
 git ls-files
 
@@ -41,6 +44,8 @@ git difftool
 git difftool HEAD
 # Vergleich Staging vs Git Repo
 git difftool --staged HEAD
+# Vergleich mit Tags
+git difftool TAG1 TAG2
 
 # Vergleich zwischen Commits
 # Commit ID herausfinden ( git log --oneline )
@@ -131,3 +136,18 @@ git tag --delete [NameDesTags]
 
 # Annotated Tag, z.B für Versionsangaben
 git tag -a [Name oder Version]
+
+# Bestimmten Commit taggen
+git tag -a [TAG] [COMMITNUMMER]
+
+# Tag verschieben
+git tag -a [TAG] -f [COMMITNUMMER]
+
+# Tags bzw. Versionen auf dem Remote laden
+git push origin [TAG]
+
+# Alles auf Remote laden
+git push origin master --tags
+
+# Bestimmten TAg auf Remote löschen
+git push origin master :TAG_NAME_DER_GELÖSCHT_WERDEN_SOLL
