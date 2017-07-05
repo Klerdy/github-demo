@@ -10,11 +10,25 @@ git ls-files
 # rekursives Adden | mehrere Unterordner mit Dateien
 git add .
 
-# Datei aus der Staging Area entfernen
+# Datei aus der Staging Area entfernen - Änderung rückgängig machen
 git reset HEAD [NAME_DER_DATEI]
 
-# Datei Inhalt auf letzten Commit setzen
+# Datei im Workspace wiederherstellen durch Stage
 git checkout -- [FILE_NAME]
+
+# Dateien im Workspace durch letzten Commit wiederherstellen
+git checkout HEAD somefile.txt
+
+# Dateien im Index/Stage aus dem letzten Commit wiederherstellen
+git reset HEAD -- somefile # Einzelne Datei
+git reset HEAD  # Gesamter Index
+git reset HEAD --hard # Gesamter Index + Working Tree
+
+# Commit rückgängig machen
+git revert <commit>
+
+# Remote anlegen
+git remote add <name> <url>
 
 # Datei löschen
 git rm [FILE_NAME]
@@ -56,6 +70,7 @@ git difftool master origin/master
 
 # Vergleich zwischen Branches
 git difftool [branch1] [branch2]
+
 # Branches 
 
 # Branches anzeigen
@@ -63,6 +78,11 @@ git branch -a
 
 # Branch erzeugen
 git branch [NAME]
+
+# Branch in ab Commit oder TAG erzeugen
+git branch <Name> <Commit,Tag>
+
+# Branch erstellen und wechseln
 git checkout -b [branchName]
 
 # Branch umbenennen
@@ -78,6 +98,9 @@ git branch -d [zulöschenderBranch]
 git merge [NameDesZuMergendenBranches]
 git merge [NameDesZuMergendenBranches] --no-ff   # Es werden nicht einfach die Commits des Branches angehangen, man kann besser erkennen, was aus dem Branch alles kommt.
 
+# Merge abbrechen, Merg-State erkennbar an Branch|MERGING $ 
+git merge --abort
+ 
 # Mergetool
 git mergetool # wird benötigt, wenn es Konflikte beim AutoMerge gibt, z.B: Änderungen an einer Datei von zwei Entwicklern
 
